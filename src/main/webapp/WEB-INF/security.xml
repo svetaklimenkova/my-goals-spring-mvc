@@ -1,0 +1,41 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+    http://www.springframework.org/schema/security
+    http://www.springframework.org/schema/security/spring-security-4.2.xsd">
+
+    <http auto-config="true">
+        <intercept-url pattern="/goal/**" access="hasRole('ROLE_USER')"/>
+
+        <form-login login-page= "/"
+                    username-parameter= "username"
+                    password-parameter= "password"
+                    login-processing-url= "/j_spring_security_check"
+                    authentication-failure-url= "/?error=true"
+                    default-target-url="/goal/"/>
+
+        <logout logout-url= "/j_spring_security_logout" logout-success-url= "/"/>
+
+        <!--Save logged user in cookie with name key='name' -->
+        <remember-me key= "myKey" token-validity-seconds= "300"/>
+
+        <csrf disabled= "true"/>
+    </http>
+
+    <authentication-manager alias="authenticationManager">
+        <authentication-provider user-service-ref="userDetailsServiceImpl">
+            <password-encoder ref="encoder"/>
+        </authentication-provider>
+    </authentication-manager>
+
+    <beans:bean id="userDetailsServiceImpl"
+                class="by.samsolutions.internship.java.mygoals.security.UserDetailsServiceImpl"/>
+
+    <beans:bean id="encoder"
+                class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">
+        <beans:constructor-arg name="strength" value="11"/>
+    </beans:bean>
+
+</beans:beans>

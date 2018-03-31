@@ -1,0 +1,172 @@
+body {
+    background: #78dad6;
+    padding: 0;
+    color: #454545;
+    font-family: 'Caveat', cursive;
+    font-size: 22px;
+}
+
+h1 {
+    font-size: 64px;
+    font-weight: bold;
+    color: #ffffff;
+    text-rendering: optimizelegibility;
+}
+
+label {
+    color: #237585;
+}
+
+.login-form h4 {
+    color: #237585;
+    border:0 solid #fff;
+    border-bottom-width:1px;
+    padding-bottom:10px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.btn-primary {
+    background: #237585 none;
+}
+
+.navbar{
+    margin-bottom:-1px;
+    margin-top:28px;
+    position:relative;
+}
+.nav li{
+    display:inline-block;
+    font-size: 24px;
+}
+
+.nav li :hover, .nav>li>a:focus, .nav>li>a:hover{
+    transform: scale(1.2);
+    background: transparent;
+}
+.nav a {
+    color:inherit;
+    border-radius:10px;
+}
+
+.mynav li a {
+    color: #237585;
+}
+
+.dropdown-menu>li>a, .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+    color: #237585;
+    text-decoration: none;
+    background-color: #bbebe5;
+    border-radius: 10px;
+    transform: scale(1.1);
+
+}
+
+.nav .open, .nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 50px;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: transparent;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: transparent;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.navbar-brand {
+    font-size: 26px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.navbar-nav>li>a {
+    line-height: 26px;
+}
+
+.tooltip-inner{
+    margin: 5px;
+    color: #fababf;
+    background-color: #B72E3E;
+    border-color: #7e2331;
+    font-family: 'Caveat', cursive;
+    font-size: 22px;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px
+}
+
+.invalid, .tooltip-invalid .tooltip-inner {
+    color: #FA7080 !important;
+    background-color: #B72E3E !important;
+}
+
+.valid, .tooltip-valid .tooltip-inner {
+    color: #bbebe5 !important;
+    background-color: #237585 !important;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 26px;
+}
+
+.form-control {
+    border-radius: 10px;
+    font-size: 22px;
+    display : inline-block;
+}
+
+#error, .error {
+    font-size: 22px;
+    color: #7e2331;
+    text-align: center;
+}
+
+.form-input {
+    margin: 5px 0px;
+}
+
+.goal-name {
+    font-size: 22px;
+    color: #237585;
+}
+
+.goal-state {
+    font-size: 18px;
+    color: #78dad6;
+}
+.not_started {
+    color: #454545;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.in_progress {
+    color: #237585;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.finished {
+    color: #237585;
+    font-weight: normal;
+    text-decoration: line-through;
+}
+
+ol.ol-stages {
+   list-style-type: none;
+}
